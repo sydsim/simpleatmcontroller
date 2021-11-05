@@ -1,4 +1,5 @@
 from cash_bin import cashbin
+from account import Account
 
 class BankSystem:
     def isValidCard(self, card_information):
@@ -9,16 +10,6 @@ class BankSystem:
         return True
 
     def getAccounts(self, card_information):
-        return [{'dummyAccount': 1234}, {'dummyAccount': 1234}, {'dummyAccount': 1234}]
-
-    def balance(self, account):
-        return 100000
-
-    def deposit(self, account, dollars):
-        return True
-    
-    def withdraw(self, account, dollars):
-        # TODO: 계좌에 잔액이 있는지 확인
-        return True
+        return [Account(balance=1010), Account(balance=100)]
 
 bank = BankSystem()
